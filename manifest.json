@@ -1,7 +1,7 @@
 {
   "short_name": "chnkyu's portfolio",
   "name": "choihyunkyu's portfolio website",
-  "start_url": ".",
+  "start_url": "/portfolio",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

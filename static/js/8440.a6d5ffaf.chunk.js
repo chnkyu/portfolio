@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[8440],{8440:(e,t,a)=>{async function n(e){let t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];await e.addInteractor("externalPause",(async e=>{const{Pauser:t}=await a.e(3014).then(a.bind(a,3014));return new t(e)}),t)}a.d(t,{loadExternalPauseInteraction:()=>n})}}]);
+//# sourceMappingURL=8440.a6d5ffaf.chunk.js.map

@@ -25,10 +25,10 @@ export const experiences: Experience[] = [
   {
     company: '서남아이에스',
     period: '2024.10 — 2025.02',
-    role: '프리랜서',
-    what: 'SI 프로젝트 퍼블리싱',
+    role: '프리랜서 · 디자이너',
+    what: '새마을금고 채용관리시스템',
     highlights: [],
-    stack: ['HTML5', 'SCSS', 'JavaScript'],
+    stack: [],
   },
   {
     company: '큐빅',

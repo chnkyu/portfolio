@@ -1,0 +1,133 @@
+@import "../variables";
+
+#Skills {
+    background:no-repeat center/cover fixed;
+    .accordion {
+        display: flex;
+
+        * {
+            transition: 0.5s;
+          }
+
+        > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 50px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: relative;
+
+            &::before {
+                content: attr(data-text);
+                text-transform: uppercase;
+                font-size: 0.8em;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+
+            &:hover {
+                flex: 2;
+                background-color: #F8F8F8;
+
+                .number {
+                    color: #d63031;
+                }
+            }
+
+            .number::before {
+                flex: 2;
+                background-color: #d63031;
+            }
+        }
+
+        &:hover > div {
+            cursor: pointer;
+        }
+    }
+
+    .number {
+        font-size: 4rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            background-color: #000;
+            bottom: -30px;
+        }
+    }
+    .info {
+        font-size: 0.9em;
+    }
+    .price {
+        color: #d63031;
+    }
+
+    .skills-wrap {
+        h4 {
+            font-family:"Montserrat", sans-serif;
+            text-transform: uppercase;
+            margin:0 0 5px;
+            font-size:1.4rem;
+        }
+
+        > ul {
+            flex-wrap:wrap;
+            margin:-15px -15px 0;
+            &:nth-of-type(2) {
+                margin-top:60px;
+            }
+
+            > li {
+                flex-basis:25%;
+                padding:0 15px;
+                margin-top:30px;
+                flex-grow:0;
+                > ul {
+                    display:flex;
+                    align-items:center;
+                    gap:20px;
+                    flex-direction: column;
+                    > li:first-child {
+                        display:flex;
+                        align-items:center;
+                    }
+                    > li:last-child {
+                        flex:1 1 100%;
+                        width:100%;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+
+        img {
+            width:80px;
+            height:80px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    #Skills {
+        background-attachment:scroll;
+        .skills-wrap {
+            > ul {
+                > li {
+                    flex-basis:100%;
+                    > ul {
+                        flex-direction: row;
+                        > li:last-child {
+                            text-align:left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

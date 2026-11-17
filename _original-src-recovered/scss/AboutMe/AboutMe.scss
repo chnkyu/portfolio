@@ -1,0 +1,75 @@
+@import "../variables";
+#AboutMe {
+    color:#fff;
+
+    h3 {
+        margin:0 0 15px;
+        font-size:2rem;
+    }
+
+    .profile-wrap {
+        word-break: keep-all;
+        .profile-photo-wrap {
+            background-color:#efefef;
+            width:360px;
+            height:360px;
+            border-radius: 50%;
+            background:url("../../public/images/profile_img.jpeg")no-repeat center / cover scroll #efefef;
+        }
+    
+        .project {
+            margin-top:30px;
+            .project-group {
+                display:flex;
+                flex-wrap:wrap;
+                b {
+                    font-size:1.3rem;
+                    font-weight:500;
+                }
+    
+                ul {
+                    width:50%;
+                    flex:1 1 50%;
+    
+                    &:not(last-child) {
+                        margin-bottom:30px;
+                    }
+                    li {
+                        &:not(last-child) {
+                            margin-bottom:5px;
+                        }
+                        > svg[class*="fa"] {
+                            color:$Main_Color;
+                            margin-right:10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width:767px) {
+    #AboutMe {
+        .flex-align-center-between {
+            > div {
+                flex-basis:50%;
+            }
+        }
+
+        .profile-wrap {
+            display:block;
+            .project {
+                .project-group {
+                    display:block;
+                    ul {
+                        width:100%;
+                    }
+                }
+            }
+            
+        }
+    }
+}

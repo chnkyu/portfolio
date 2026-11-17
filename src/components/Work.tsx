@@ -20,7 +20,14 @@ function FeaturedCard({ p, onOpen }: { p: Project; onOpen: Props['onOpen'] }) {
       }}
     >
       <div className="feat-img">
-        {p.thumb && <img className="pc" src={asset(p.thumb)} alt={`${p.title} 화면`} loading="lazy" />}
+        {p.thumb ? (
+          <img className="pc" src={asset(p.thumb)} alt={`${p.title} 화면`} loading="lazy" />
+        ) : (
+          <div className="feat-ph" aria-hidden="true">
+            <strong>{p.client.split(' (')[0]}</strong>
+            <span>{p.stack}</span>
+          </div>
+        )}
         {p.thumbMobile && (
           <span className="feat-phone">
             <img src={asset(p.thumbMobile)} alt={`${p.title} 모바일 화면`} loading="lazy" />
@@ -40,7 +47,8 @@ function FeaturedCard({ p, onOpen }: { p: Project; onOpen: Props['onOpen'] }) {
 
 export default function Work({ onOpen }: Props) {
   const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
+  // 목록은 최신순 (기간 시작일 기준)
+  const others = projects.filter((p) => !p.featured).sort((a, b) => b.period.localeCompare(a.period));
   return (
     <section className="work gutter" id="work" aria-labelledby="work-title">
       <div className="work-head">

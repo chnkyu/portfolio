@@ -188,6 +188,14 @@ export default function ProjectSheet({ id, onChange, onClose }: Props) {
             ))}
           </ul>
         </section>
+        <section>
+          <h3>사용 기술</h3>
+          <div className="tags">
+            {p.stack.split(' · ').map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </div>
+        </section>
       </div>
 
       <div className="gutter">

@@ -34,7 +34,7 @@ export default function Experience() {
                     ))}
                   </ul>
                 )}
-                <div className="tags">
+                <div className="tags" hidden={exp.stack.length === 0}>
                   {exp.stack.map((s) => (
                     <span key={s}>{s}</span>
                   ))}

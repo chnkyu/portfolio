@@ -221,7 +221,7 @@
     .top-nav a:focus-visible { outline: none; }
     .hero .menu-btn { display: none; }
     .hero { min-height: 720px; }
-    .intro { margin-left: auto; width: min(560px, 45%); padding-bottom: 48px; gap: 22px; }
+    .intro { padding-left: max(58%, calc(100% - 560px - max(64px, (100vw - 1312px) / 2))); padding-bottom: 48px; gap: 22px; }
     .arrow { width: 28px; height: 28px; }
     .role { font-size: 44px; }
     .marquee { padding-block: 20px 40px; }

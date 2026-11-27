@@ -14,7 +14,7 @@ export default function About() {
     <section className="about gutter" id="about" aria-label="About">
       <p className="label">About</p>
       <p className="statement">{rich(about.statement)}</p>
-      <p className="sub">{about.sub}</p>
+      <div className="clients"><p className="label">{about.clientsLabel}</p><ul>{about.clients.map((c) => <li key={c}>{c}</li>)}</ul></div>
       <MagneticButton onClick={() => scrollToSection('experience')}>{about.button}</MagneticButton>
     </section>
   );
